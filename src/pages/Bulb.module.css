@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.img {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonOn {
+  width: 120px;
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: rgb(233, 91, 8);
+  color: #fff;
+}
+
+.buttonOff {
+  width: 120px;
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+.buttonFlicker {
+  width: 120px;
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: rgb(233, 91, 8);
+  color: #fff;
+  animation: flick 7s linear infinite;
+}
+
+@keyframes flick {
+  0% {
+    background-color: rgb(233, 91, 8);
+    filter: brightness(1.5);
+  }
+
+  15% {
+    background-color: #111;
+  }
+
+  25% {
+    background-color: rgb(233, 91, 8);
+    filter: brightness(1.5);
+  }
+
+  35% {
+    background-color: #111;
+  }
+
+  45% {
+    background-color: rgb(233, 91, 8);
+    filter: brightness(1.5);
+  }
+
+  55% {
+    background-color: #111;
+  }
+
+  65% {
+    background-color: rgb(233, 91, 8);
+    filter: brightness(1.5);
+  }
+
+  75% {
+    background-color: #111;
+  }
+
+  90% {
+    background-color: rgb(233, 91, 8);
+    filter: brightness(1.5);
+  }
+
+  100% {
+    background-color: #111;
+  }
+}
+
+.buttonOn,
+.buttonOff,
+.buttonFlicker:hover {
+  cursor: pointer;
+}
+
+.bulbOn {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  object-fit: contain;
+  filter: brightness(1.5);
+}
+
+.bulbOff {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  object-fit: contain;
+  filter: brightness(0.2);
+
+  /* if you want to turn Off bulb completely */
+  filter: brightness(0);
+
+}
+
+.flicker {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  object-fit: contain;
+  animation: bulb 4s linear infinite;
+}
+
+@keyframes bulb {
+  0% {
+    filter: brightness(0.5);
+  }
+
+  15% {
+    filter: brightness(1.5);
+  }
+  25% {
+    filter: brightness(0.5);
+  }
+  35% {
+    filter: brightness(1.5);
+  }
+
+  45% {
+    filter: brightness(0.5);
+  }
+
+  55% {
+    filter: brightness(1.5);
+  }
+
+  65% {
+    filter: brightness(0.5);
+  }
+
+  75% {
+    filter: brightness(1.5);
+  }
+
+  90% {
+    filter: brightness(0.5);
+  }
+
+  100% {
+    filter: brightness(1.5);
+  }
+}
